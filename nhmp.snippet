@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NH Property</Title>
+      <Author>Jean Guilherme</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>nhmp</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>FieldName</ID>
+          <ToolTip>Field Name</ToolTip>
+          <Default>Field</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>FieldType</ID>
+          <ToolTip>Field Type</ToolTip>
+          <Default>AnsiString</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="xml" Delimiter="$"><![CDATA[<property name="$FieldName$" column="$FieldName$" type="$FieldType$" />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

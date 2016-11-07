@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NH Mapping</Title>
+      <Author>Jean Guilherme Cabral</Author>
+      <Description>
+        A construção inicial do mapeamento
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>nhm</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>AssemblyName</ID>
+          <ToolTip>Assembly Name</ToolTip>
+          <Default>Sda.SampleApplication</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>EntityName</ID>
+          <ToolTip>Entity Name</ToolTip>
+          <Default>EntityName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TableName</ID>
+          <ToolTip>Table Name</ToolTip>
+          <Default>el_sample_Table</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Generator</ID>
+          <ToolTip>Generator</ToolTip>
+          <Default>native</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>IdType</ID>
+          <ToolTip>ID Type</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="xml" Delimiter="$"><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+        <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" schema="dbo"
+         assembly="$AssemblyName$.Data"
+         namespace="$AssemblyName$.Entities" default-lazy="false" default-cascade="none">
+         <class name="$AssemblyName$.Entities.$EntityName$, $AssemblyName$" table="$TableName$">
+          <id name="Id" column="$EntityName$Id" type="$IdType$" >
+            <generator class="$Generator$" />
+          </id>$end$
+        </class>
+      </hibernate-mapping>
+      ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

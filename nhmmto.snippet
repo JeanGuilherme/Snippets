@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NH Many to One</Title>
+      <Author>Jean Guilherme</Author>
+      <Description>
+        NHibertate Many To One
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>nhmmto</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>FieldName</ID>
+          <ToolTip>Field Name</ToolTip>
+          <Default>FieldName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ColumnName</ID>
+          <ToolTip>Column Name</ToolTip>
+          <Default>ColumnName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>EntityName</ID>
+          <ToolTip>Entity Name</ToolTip>
+          <Default>Entity</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="xml" Delimiter="$"><![CDATA[<many-to-one name="$FieldName$" column="$FieldName$Id" class="$EntityName$" />$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
